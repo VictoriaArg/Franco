@@ -1,0 +1,58 @@
+.heroImg {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  animation-name: scaleUp;
+  animation-duration: 2.5s;
+  transition: ease-out;
+}
+
+.heroImg img {
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.heroName img {
+  position: absolute;
+  z-index: 9;
+  top: 20vh;
+  left: 29vw;
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  animation-name: appear;
+  animation-duration: 2.5s;
+  transition: ease-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8, 0.75);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.8, 0.75);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
